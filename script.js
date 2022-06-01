@@ -55,16 +55,16 @@ const ourTeam = [
 function createCard(object){
     const cardElement = document.createElement('div');
     cardElement.classList.add('team-card');
-    const teamCardDiv = document.createElement('div');
-    teamCardDiv.classList.add('card-image');
+    const imgContainerDiv = document.createElement('div');
+    imgContainerDiv.classList.add('card-image');
     const cardImage = document.createElement('img');
     cardImage.src = `img/${object.imgUrl}`;
     cardImage.alt = object.memberName;
     const cardText = document.createElement('div');
     cardText.classList.add('card-text');
     cardText.innerHTML = `<h3>${object.memberName}</h3><p>${object.role}</p>`;
-    teamCardDiv.appendChild(cardImage);
-    cardElement.appendChild(teamCardDiv);
+    imgContainerDiv.appendChild(cardImage);
+    cardElement.appendChild(imgContainerDiv);
     cardElement.appendChild(cardText);
 
     return cardElement;
